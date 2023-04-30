@@ -17,4 +17,4 @@ Finally it reports back the results
 
 THE DEMO TESTS
 
-The first demo tests run some tests, creates orders, then queries them, updates them and then deletes them -using idfferent env variables in postman and also runnin pre-and after test scripts to store and use the results of previous tests
+The first demo tests run some tests, creates orders, then queries them, updates them and then deletes them -using different env variables in postman and also running pre-and after test scripts to store and use the results of previous tests
