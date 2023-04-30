@@ -29,7 +29,7 @@ jobs:
     - name: run newman tests
       env:
         POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
-        BOOK_GLITCH_TESTS_COLLECTION_KEY: ${{env.BOOK_GLITCH_TESTS_COLLECTION_KEY}}
+        BOOK_GLITCH_TESTS_COLLECTION_KEY: ${{secrets.BOOK_GLITCH_TESTS_COLLECTION_KEY}}
       run: |
         newman run "https://api.getpostman.com/collections/$BOOK_GLITCH_TESTS_COLLECTION_KEY?apikey=$POSTMAN_API_KEY" --environment "https://api.getpostman.com/environments/1975691-780421db-70ce-49de-9345-9d717c47aa4c?apikey=$POSTMAN_API_KEY" --reporters cli,html --reporter-html-export report.html --disable-unicode
       working-directory: newman
