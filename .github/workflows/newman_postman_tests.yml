@@ -18,14 +18,18 @@ jobs:
       with:
         node-version: 18
 
-    - name: install Newman
-      run: npm install -g newman
+    - name: install newman and reporters
+      run: |
+        npm install -g newman
+        npm install -g newman-reporter-html
+      
+    - name: create 'newman' directory
+      run: mkdir -p newman
 
     - name: run newman tests
       env:
         POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
       run: |
-        mkdir newman
         newman run "https://api.getpostman.com/collections/1975691-3e97bc95-2f11-4273-92dd-a675db37eef1?apikey=$POSTMAN_API_KEY" --environment "https://api.getpostman.com/environments/1975691-780421db-70ce-49de-9345-9d717c47aa4c?apikey=$POSTMAN_API_KEY" --reporters cli,html --reporter-html-export report.html --disable-unicode
       working-directory: newman
       
