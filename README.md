@@ -1,4 +1,4 @@
-# NewmanTests
+# NewmanPostmanTests
 
 This reporitory is the host for different newman tests
 
