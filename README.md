@@ -2,6 +2,9 @@
 
 This reporitory is the host for different newman tests
 
+
+IN GENERAL
+
 Running different postman collections
 
 This repository can be called from other repos to use it in a multipipeline test layout
@@ -12,4 +15,6 @@ Finally it reports back the results
 
 --------------------------
 
-the first demo tests run some tests, creates orders, then queries them, updates them and then deletes them
+THE DEMO TESTS
+
+The first demo tests run some tests, creates orders, then queries them, updates them and then deletes them -using idfferent env variables in postman and also runnin pre-and after test scripts to store and use the results of previous tests
