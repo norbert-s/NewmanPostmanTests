@@ -1,6 +1,6 @@
 # NewmanPostmanTests
 
-This reporitory is the host for different newman tests
+This reporitory is a demo for postman tests run by newman
 
 
 IN GENERAL
